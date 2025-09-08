@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMS Vehicles | SECRET RP</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="logo">Secret RP</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cars.html">Cars</a>
+    <a href="moto.html">Motorcycles</a>
+    <a href="police.html">Police</a>
+    <a href="ems.html">EMS</a>
+  </nav>
+</header>
+<section class="page-header" style="background-image:url('images/ems.png');">
+  <h1>EMS Vehicles</h1>
+</section>
+<section class="product-section">
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for ems vehicles..." oninput="filterCards()">
+  </div>
+  <div class="product-grid" id="productGrid">
+    <div class="product-card"><div class="name">2020 BMW M5</div><div class="spawn">/car DLM5EMS</div></div>
+<div class="product-card"><div class="name">2019 BMW M7</div><div class="spawn">/car DLM7EMS</div></div>
+<div class="product-card"><div class="name">2018 Dodge RAM 1500 Rebel</div><div class="spawn">/car DLRAMEMS</div></div>
+<div class="product-card"><div class="name">2018 Audi RS6 Avant</div><div class="spawn">/car DLRS6EMS</div></div>
+<div class="product-card"><div class="name">2019 Audi RS7 Sportback</div><div class="spawn">/car DLRS7EMS</div></div>
+<div class="product-card"><div class="name">2018 Audi RS Q8</div><div class="spawn">/car DLRSQ8EMS</div></div>
+<div class="product-card"><div class="name">2018 BMW X5 M (F85)</div><div class="spawn">/car DLX5EMS</div></div>
+<div class="product-card"><div class="name">2020 Yamaha YZF-R1</div><div class="spawn">/car DLYAMAHAEMS</div></div>
+  </div>
+</section>
+<footer>
+  &copy; 2025 SECRET RP. All rights reserved.
+</footer>
+<script>
+  function filterCards() {
+    var input = document.getElementById('searchInput');
+    var filter = input.value.toLowerCase();
+    var cards = document.getElementById('productGrid').getElementsByClassName('product-card');
+    for (var i = 0; i < cards.length; i++) {
+      var nameElem = cards[i].getElementsByClassName('name')[0];
+      var txtValue = nameElem.textContent || nameElem.innerText;
+      if (txtValue.toLowerCase().indexOf(filter) > -1) {
+        cards[i].style.display = '';
+      } else {
+        cards[i].style.display = 'none';
+      }
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motorcycles | SECRET RP</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="logo">Secret RP</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cars.html">Cars</a>
+    <a href="moto.html">Motorcycles</a>
+    <a href="police.html">Police</a>
+    <a href="ems.html">EMS</a>
+  </nav>
+</header>
+<section class="page-header" style="background-image:url('images/moto.png');">
+  <h1>Motorcycles</h1>
+</section>
+<section class="product-section">
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for motorcycles..." oninput="filterCards()">
+  </div>
+  <div class="product-grid" id="productGrid">
+    <div class="product-card"><div class="name">Yamaha Aerox 155</div><div class="spawn">/car aerox155</div></div>
+<div class="product-card"><div class="name">2019 Honda CB650R</div><div class="spawn">/car cb650r</div></div>
+<div class="product-card"><div class="name">Harley-Davidson Breakout CLAW</div><div class="spawn">/car claw</div></div>
+<div class="product-card"><div class="name">BMW S1000RR</div><div class="spawn">/car GODzBMWS1000RR</div></div>
+<div class="product-card"><div class="name">Kawasaki Ninja H2</div><div class="spawn">/car GODzNINJAH2</div></div>
+<div class="product-card"><div class="name">Kawasaki Ninja ZX-10R</div><div class="spawn">/car GODzYAMR1</div></div>
+<div class="product-card"><div class="name">LCC Hexer</div><div class="spawn">/car hexerz2</div></div>
+<div class="product-card"><div class="name">2008 Yamaha YZF-R6</div><div class="spawn">/car kawagala</div></div>
+<div class="product-card"><div class="name">2025 BMW S 1000 RR</div><div class="spawn">/car km1000rr</div></div>
+<div class="product-card"><div class="name">Lp Chopper 2 Biker</div><div class="spawn">/car lpchopper2</div></div>
+<div class="product-card"><div class="name">Kawasaki Ninja H2R</div><div class="spawn">/car ninjah2</div></div>
+<div class="product-card"><div class="name">Harley-Davidson Road Glide</div><div class="spawn">/car rd</div></div>
+<div class="product-card"><div class="name">Kawasaki Ninja H2S {Custom}</div><div class="spawn">/car RoyalCustomKawasakiSH2</div></div>
+<div class="product-card"><div class="name">2025 Yamaha YZF-R1</div><div class="spawn">/car rr01</div></div>
+<div class="product-card"><div class="name">2008 Yamaha YZF-R6</div><div class="spawn">/car yzfr6</div></div>
+<div class="product-card"><div class="name">2021 Yamaha YZF-R7</div><div class="spawn">/car yzfr7</div></div>
+<div class="product-card"><div class="name">2016 Kawasaki Z800R</div><div class="spawn">/car z8r</div></div>
+<div class="product-card"><div class="name">Kawasaki Ninja ZX-6R</div><div class="spawn">/car zx6r</div></div>
+<div class="product-card"><div class="name">Kawasaki Ninja ZX-10R</div><div class="spawn">/car zx10r</div></div>
+  </div>
+</section>
+<footer>
+  &copy; 2025 SECRET RP. All rights reserved.
+</footer>
+<script>
+  function filterCards() {
+    var input = document.getElementById('searchInput');
+    var filter = input.value.toLowerCase();
+    var cards = document.getElementById('productGrid').getElementsByClassName('product-card');
+    for (var i = 0; i < cards.length; i++) {
+      var nameElem = cards[i].getElementsByClassName('name')[0];
+      var txtValue = nameElem.textContent || nameElem.innerText;
+      if (txtValue.toLowerCase().indexOf(filter) > -1) {
+        cards[i].style.display = '';
+      } else {
+        cards[i].style.display = 'none';
+      }
+    }
+  }
+</script>
+</body>
+</html>

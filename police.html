@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Police Vehicles | SECRET RP</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="logo">Secret RP</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cars.html">Cars</a>
+    <a href="moto.html">Motorcycles</a>
+    <a href="police.html">Police</a>
+    <a href="ems.html">EMS</a>
+  </nav>
+</header>
+<section class="page-header" style="background-image:url('images/police.png');">
+  <h1>Police Vehicles</h1>
+</section>
+<section class="product-section">
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for police vehicles..." oninput="filterCards()">
+  </div>
+  <div class="product-grid" id="productGrid">
+    <div class="product-card"><div class="name">POLICE</div><div class="spawn">/car DL_a45</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car DL_rs6</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car DL_RS7</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car dlr34um</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car dlrs6um</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car eheli</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car gurkharb</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car pd_escalader</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car polbmwm3</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car polbmwm5</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car polbmwm7</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car polcoach</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car poldurango</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car polgt63</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car polheli</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car policeboat</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car polmustang</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car polrs6</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car polsilverado19</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car Prisonvan2rb</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car rrhycadeevoxpd</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car speeddemonrb</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car sw_bearcat</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car sw_charg</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car sw_durango</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car sw_sprinter</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car sw_subrb</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car trhawk</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car unmarkedjl</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car valor1rb</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car valor3rb</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car valor5rb</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car valor6rb</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car valor9rb</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car valor10rb</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car valor12rb</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car valor13rb</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car valor15rb</div></div>
+<div class="product-card"><div class="name">POLICE</div><div class="spawn">/car valorharley</div></div>
+  </div>
+</section>
+<footer>
+  &copy; 2025 SECRET RP. All rights reserved.
+</footer>
+<script>
+  function filterCards() {
+    var input = document.getElementById('searchInput');
+    var filter = input.value.toLowerCase();
+    var cards = document.getElementById('productGrid').getElementsByClassName('product-card');
+    for (var i = 0; i < cards.length; i++) {
+      var nameElem = cards[i].getElementsByClassName('name')[0];
+      var txtValue = nameElem.textContent || nameElem.innerText;
+      if (txtValue.toLowerCase().indexOf(filter) > -1) {
+        cards[i].style.display = '';
+      } else {
+        cards[i].style.display = 'none';
+      }
+    }
+  }
+</script>
+</body>
+</html>
