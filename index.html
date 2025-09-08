@@ -5,16 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SECRET RP VIP Store</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
   <div class="logo">Secret RP</div>
   <nav>
+    <a href="index.html">Home</a>
     <a href="cars.html">Cars</a>
     <a href="moto.html">Motorcycles</a>
-    <a href="police.html">Police</a>
+    <!-- Updated link: Police page replaced by VIP Businesses -->
+    <a href="business.html">VIP Businesses</a>
+    <!-- New link: VIP Villas -->
+    <a href="villas.html">VIP Villas</a>
     <a href="ems.html">EMS</a>
+    <!-- Discord server link -->
+    <a href="https://discord.gg/secret-rp" target="_blank">Discord</a>
+    <!-- Button styled link to open a Discord ticket for rentals -->
+    <a href="https://discord.com/channels/1400347360634343534/1400347363045933090" class="btn" target="_blank">Open Ticket</a>
   </nav>
 </header>
 <section class="hero">
@@ -24,26 +32,45 @@
     <a href="#categories" class="btn">Browse Categories</a>
   </div>
 </section>
+
+<!-- Rules & Terms section added to inform players before shopping -->
+<section id="rules" class="rules-section">
+  <h2>Rules &amp; Terms</h2>
+  <ul>
+    <li>VIP rentals are <strong>non‑refundable</strong>.</li>
+    <li>VIP rentals are <strong>non‑transferable</strong>.</li>
+    <li>All players must abide by our server rules; misuse may lead to loss of access.</li>
+    <li>Inactivity may result in rentals being revoked.</li>
+    <li>All transactions and rentals must be handled through our Discord ticket system.</li>
+  </ul>
+</section>
 <section id="categories" class="category-section">
   <h2>Shop by Category</h2>
   <div class="category-grid">
     <div class="category-card">
-      <img src="car.png" alt="Cars">
+      <img src="images/car.png" alt="Cars">
       <h3>Cars</h3>
       <a href="cars.html" class="btn">View Cars</a>
     </div>
     <div class="category-card">
-      <img src="moto.png" alt="Motorcycles">
+      <img src="images/moto.png" alt="Motorcycles">
       <h3>Motorcycles</h3>
       <a href="moto.html" class="btn">View Motorcycles</a>
     </div>
     <div class="category-card">
-      <img src="police.png" alt="Police Vehicles">
-      <h3>Police</h3>
-      <a href="police.html" class="btn">View Police</a>
+      <img src="images/police.png" alt="VIP Businesses">
+      <!-- Updated card: VIP Businesses replaced Police -->
+      <h3>VIP Businesses</h3>
+      <a href="business.html" class="btn">View Businesses</a>
+    </div>
+    <!-- New card: VIP Villas -->
+    <div class="category-card">
+      <img src="images/hero.png" alt="VIP Villas">
+      <h3>VIP Villas</h3>
+      <a href="villas.html" class="btn">View Villas</a>
     </div>
     <div class="category-card">
-      <img src="ems.png" alt="EMS Vehicles">
+      <img src="images/ems.png" alt="EMS Vehicles">
       <h3>EMS</h3>
       <a href="ems.html" class="btn">View EMS</a>
     </div>
